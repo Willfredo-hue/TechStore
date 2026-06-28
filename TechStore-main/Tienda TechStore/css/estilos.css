@@ -1,0 +1,54 @@
+
+        body{
+            background-color:#f5f7fa;
+        }
+
+        .hero{
+            background: linear-gradient(rgba(0,0,0,.7), rgba(0,0,0,.7)),
+            url('https://images.unsplash.com/photo-1518770660439-4636190af475');
+            background-size: cover;
+            background-position: center;
+            color:white;
+            padding:120px 0;
+        }
+
+        .hero h1{
+            font-size:3rem;
+            font-weight:bold;
+        }
+
+        .card:hover{
+            transform: translateY(-5px);
+            transition:0.3s;
+        }
+
+        .category-box{
+            background:white;
+            border-radius:10px;
+            padding:20px;
+            text-align:center;
+            box-shadow:0 2px 10px rgba(0,0,0,.1);
+        }
+
+        footer{
+            background:#212529;
+            color:white;
+            padding:20px;
+            text-align:center;
+        }
+
+        .registro{
+            background:white;
+            padding:40px;
+            border-radius:15px;
+            box-shadow:0 0 15px rgba(0,0,0,.1);
+        }
+        
+        #contadorCarrito{
+    font-size: 12px;
+}
+
+.modal-body{
+    max-height: 400px;
+    overflow-y: auto;
+}

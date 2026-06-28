@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TechStore - Tienda Tecnológica</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/estilos.css">
+</head>
+<body class="bg-dark text-white min-vh-100 d-flex flex-column">
+
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark border-bottom border-secondary">
+        <div class="container">
+            <a class="navbar-brand fw-bold" href="#">💻 TechStore</a>
+
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menu">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="menu">
+                <ul class="navbar-nav ms-auto align-items-center">
+                    <li class="nav-item"><a class="nav-link" href="#">Inicio</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#productos">Productos</a></li>
+                    <li class="nav-item"><a class="nav-link" href="Contactos.html">Contacto</a></li>
+                    
+                    <li class="nav-item" id="navLogin">
+                        <button class="btn btn-outline-info btn-sm me-2" data-bs-toggle="modal" data-bs-target="#loginModal">
+                            Iniciar Sesión
+                        </button>
+                    </li>
+
+                    <li class="nav-item" id="navRegistro">
+                        <a class="nav-link" href="registro.html">Registro</a>
+                    </li>
+
+                    <li class="nav-item dropdown d-none" id="navUsuario">
+                        <a class="nav-link dropdown-toggle d-flex align-items-center" href="#" id="userDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            <span class="bg-success rounded-circle me-2" style="width: 10px; height: 10px; display: inline-block;"></span>
+                            <span id="nombreUsuarioHeader" class="fw-bold text-white">Usuario</span>
+                        </a>
+                        <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="userDropdown">
+                            <li>
+                                <a class="dropdown-item text-danger" href="#" onclick="cerrarSesion(event)">
+                                    🚪 Cerrar Sesión
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+
+                    <li class="nav-item ms-lg-3">
+                        <button class="btn btn-outline-light position-relative" data-bs-toggle="modal" data-bs-target="#carritoModal">
+                            🛒 Carrito
+                            <span id="contadorCarrito" class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
+                                0
+                            </span>
+                        </button>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+  <section class="hero text-center py-5 bg-secondary bg-opacity-10">
+    <div class="container">
+        <h1 class="display-4 fw-bold text-info">La Mejor Tecnología Para Ti</h1>
+        <p class="lead text-white">Computadoras, accesorios y componentes de última generación.</p>
+    </div>
+</section>
+
+    <section class="container my-5">
+        <h2 class="text-center mb-4 fw-bold">Categorías</h2>
+        <div class="row g-4">
+            <div class="col-md-3">
+                <a href="laptops.html" class="btn btn-outline-primary w-100 p-4 fw-bold">💻 Laptops</a>
+            </div>
+            <div class="col-md-3">
+                <a href="pcgamer.html" class="btn btn-outline-success w-100 p-4 fw-bold">🖥️ PC Gamer</a>
+            </div>
+            <div class="col-md-3">
+                <a href="perifericos.html" class="btn btn-outline-warning w-100 p-4 fw-bold">⌨️ Periféricos</a>
+            </div>
+            <div class="col-md-3">
+                <a href="accesorios.html" class="btn btn-outline-danger w-100 p-4 fw-bold">🎧 Accesorios</a>
+            </div>
+            <div class="col-md-3">
+                <a href="gadgets.html" class="btn btn-outline-danger w-100 p-4 fw-bold">🎧 Gadgets </a>
+            </div>
+            <div class="col-md-3">
+                <a href="girlzone.html" class="btn btn-outline-warning w-100 p-4 fw-bold">🎧 GirlZone </a>
+            </div>
+            <div class="col-md-3">
+                <a href="almacenamiento.html" class="btn btn-outline-success w-100 p-4 fw-bold">🎧 Almacenamiento </a>
+            </div>
+             <div class="col-md-3">
+                <a href="redes.html" class="btn btn-outline-primary w-100 p-4 fw-bold">🎧 Redes </a>
+            </div>
+        </div>
+    </section>
+
+    <section id="productos" class="container my-5 flex-grow-1">
+        <h2 class="text-center mb-5 fw-bold">Productos Destacados</h2>
+        <div class="row g-4">
+
+            <div class="col-md-4">
+                <div class="card producto-card h-100 bg-secondary bg-opacity-10 text-white border-secondary">
+                    <img src="https://api.zonadigitalsv.com/storage/products/imagen_generada6a187a0a81587.jpg" class="card-img-top producto-img" alt="Laptop HP">
+                    <div class="card-body d-flex flex-column">
+                        <h5 class="card-title fw-bold">Laptop HP 15-fd0557nr</h5>
+                        <p class="card-text text-muted small">Intel Core i7 1255u RAM DDR4 12GB Almacenamiento SSD 512GB</p>
+                        <h4 class="precio text-info fw-bold mt-auto">$899.95</h4>
+                        <button class="btn btn-success btn-carrito mt-2">Agregar al Carrito</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="card producto-card h-100 bg-secondary bg-opacity-10 text-white border-secondary">
+                    <img src="https://api.zonadigitalsv.com/storage/products/imagen_generada6a1f0128cdbd2.jpg" class="card-img-top producto-img" alt="Audífonos JBL">
+                    <div class="card-body d-flex flex-column">
+                        <h5 class="card-title fw-bold">Audífonos</h5>
+                        <p class="card-text text-muted small">Headset JBL Quantum 250</p>
+                        <h4 class="precio text-info fw-bold mt-auto">$49.95</h4>
+                        <button class="btn btn-success btn-carrito mt-2">Agregar al Carrito</button>
+                        
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="card producto-card h-100 bg-secondary bg-opacity-10 text-white border-secondary">
+                    <img src="https://api.zonadigitalsv.com/storage/products/imagen_generada647a5fa51a9db.jpg" class="card-img-top producto-img" alt="Razer Soundbar">
+                    <div class="card-body d-flex flex-column">
+                        <h5 class="card-title fw-bold">Barra de Sonido</h5>
+                        <p class="card-text text-muted small">Razer Leviathan V2 X Bluetooth 5.0 RGB RZ05-04280100-r3u1</p>
+                        <h4 class="precio text-info fw-bold mt-auto">$1299.99</h4>
+                        <button class="btn btn-success btn-carrito mt-2">Agregar al Carrito</button>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <footer class="bg-dark text-white py-4 border-top border-secondary mt-auto">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-md-4 text-center text-md-start">
+                    <div class="fw-bold text-info fs-5">💻 TechStore</div>
+                </div>
+                <div class="col-md-4 text-center my-2 my-md-0">
+                    <div class="text-white-50 small">
+                        © 2026 TechStore - Todos los derechos reservados.
+                    </div>
+                </div>
+                <div class="col-md-4 d-none d-md-block"></div>
+            </div>
+        </div>
+    </footer>
+
+    <div class="modal fade" id="carritoModal" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-lg text-dark">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="fw-bold">🛒 Carrito de Compras</h5>
+                    <button class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <table class="table">
+                        <thead>
+                            <tr>
+                                <th>Producto</th>
+                                <th>Precio</th>
+                            </tr>
+                        </thead>
+                        <tbody id="tablaCarrito"></tbody>
+                    </table>
+                    <h4 class="text-end fw-bold">Total: $<span id="totalCarrito">0.00</span></h4>
+                </div>
+                <div class="modal-footer">
+                    <button class="btn btn-danger" onclick="vaciarCarrito()">Vaciar Carrito</button>
+                    <button class="btn btn-success">Finalizar Compra</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="loginModal" tabindex="-1" aria-labelledby="loginModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content bg-dark text-white border-secondary">
+                <div class="modal-header border-secondary">
+                    <h5 class="modal-title fw-bold text-info" id="loginModalLabel">💻 Ingresar a TechStore</h5>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body p-4">
+    <form id="formLogin">
+        <div class="mb-3">
+            <label for="loginEmail" class="form-label">Correo Electrónico</label>
+            <input type="email" id="loginEmail" class="form-control bg-secondary text-white border-0" required placeholder="usuario@correo.com">
+        </div>
+        <div class="mb-3">
+            <label for="loginPassword" class="form-label">Contraseña</label>
+            <input type="password" id="loginPassword" class="form-control bg-secondary text-white border-0" required placeholder="******">
+        </div>
+        <button type="submit" class="btn btn-info w-100 fw-bold mt-2">Entrar</button>
+    </form>
+    
+   <div class="text-center mt-4 w-100 small">
+        <span class="text-white">¿No tienes cuenta?</span> 
+        <a href="registro.html" class="text-info text-decoration-none fw-bold ms-1">Regístrate aquí</a>
+    </div>
+</div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/carrito.js"></script>
+    <script src="js/auth.js"></script> 
+</body>
+</html>
