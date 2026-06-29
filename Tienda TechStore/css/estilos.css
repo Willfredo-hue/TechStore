@@ -1,0 +1,1024 @@
+/* ============================= */
+/* CONFIGURACION GENERAL */
+/* ============================= */
+
+body{
+
+    background:
+    radial-gradient(circle at top,#003b4d,#111827 55%);
+
+    color:white;
+
+    overflow-x:hidden;
+
+}
+
+
+
+/* Circuitos tecnológicos */
+
+body::before{
+
+    content:"";
+
+    position:fixed;
+
+    width:200%;
+    height:200%;
+
+    background-image:
+    linear-gradient(
+        90deg,
+        transparent 95%,
+        #0dcaf0 100%
+    );
+
+    opacity:.08;
+
+    animation:
+    circuito 12s linear infinite;
+
+    z-index:-1;
+
+}
+
+
+
+@keyframes circuito{
+
+    from{
+        transform:translate(0,0);
+    }
+
+    to{
+        transform:translate(-150px,-150px);
+    }
+
+}
+
+
+
+
+/* ============================= */
+/* NAVBAR */
+/* ============================= */
+
+
+.navbar-brand{
+
+    animation:
+    flotar 3s ease-in-out infinite;
+
+}
+
+
+
+@keyframes flotar{
+
+    0%,100%{
+
+        transform:translateY(0);
+
+    }
+
+
+    50%{
+
+        transform:translateY(-6px);
+
+    }
+
+}
+
+
+
+
+/* ============================= */
+/* HERO */
+/* ============================= */
+
+
+.hero{
+
+    background:
+    linear-gradient(
+    rgba(0,0,0,.75),
+    rgba(0,0,0,.75)
+    ),
+    url('https://images.unsplash.com/photo-1518770660439-4636190af475');
+
+
+    background-size:cover;
+
+    background-position:center;
+
+
+    padding:120px 0;
+
+
+    animation:
+    aparecerHero 1.2s ease;
+
+}
+
+
+
+@keyframes aparecerHero{
+
+
+    from{
+
+        opacity:0;
+
+        transform:scale(1.05);
+
+    }
+
+
+    to{
+
+        opacity:1;
+
+        transform:scale(1);
+
+    }
+
+}
+
+
+
+
+.hero h1{
+
+    font-size:3rem;
+
+    font-weight:bold;
+
+
+    animation:
+    neon 2s infinite alternate;
+
+}
+
+
+
+@keyframes neon{
+
+
+    from{
+
+        text-shadow:
+        0 0 10px #0dcaf0;
+
+    }
+
+
+    to{
+
+
+        text-shadow:
+        0 0 30px #0dcaf0,
+        0 0 60px #0dcaf0;
+
+    }
+
+}
+
+
+
+
+
+/* ============================= */
+/* CATEGORIAS */
+/* ============================= */
+
+
+.category-box{
+
+    background:
+    rgba(255,255,255,.08);
+
+
+    backdrop-filter:
+    blur(10px);
+
+
+    border-radius:15px;
+
+    padding:20px;
+
+
+    transition:.35s;
+
+
+    border:1px solid rgba(255,255,255,.15);
+
+}
+
+
+
+.category-box:hover{
+
+
+    transform:
+
+    translateY(-10px)
+    scale(1.05);
+
+
+    box-shadow:
+
+    0 0 25px #0dcaf0;
+
+
+}
+
+
+
+/* botones categorias */
+
+
+section a.btn{
+
+
+    transition:.3s;
+
+}
+
+
+
+section a.btn:hover{
+
+
+    transform:
+    translateY(-5px)
+    scale(1.03);
+
+
+    box-shadow:
+    0 0 20px currentColor;
+
+}
+
+
+
+
+
+/* ============================= */
+/* PRODUCTOS */
+/* ============================= */
+
+
+.producto-card{
+
+
+    background:
+    rgba(255,255,255,.08)
+    !important;
+
+
+    backdrop-filter:
+    blur(8px);
+
+
+    border-radius:18px;
+
+
+    overflow:hidden;
+
+
+    animation:
+    aparecerProducto .8s ease forwards;
+
+
+    transition:.4s;
+
+
+}
+
+
+
+@keyframes aparecerProducto{
+
+
+    from{
+
+        opacity:0;
+
+        transform:
+        translateY(40px);
+
+    }
+
+
+    to{
+
+        opacity:1;
+
+        transform:
+        translateY(0);
+
+    }
+
+}
+
+
+
+
+
+.producto-card:hover{
+
+
+    transform:
+
+    translateY(-12px)
+    rotateX(4deg);
+
+
+    box-shadow:
+
+    0 15px 40px
+    rgba(13,202,240,.4);
+
+
+}
+
+
+
+
+/* imagen producto */
+
+
+.producto-img{
+
+
+    transition:.5s;
+
+
+}
+
+
+
+.producto-card:hover .producto-img{
+
+
+    transform:
+    scale(1.12);
+
+
+}
+
+
+
+
+/* precio */
+
+
+.precio{
+
+
+    animation:
+
+    precioGlow 2s infinite alternate;
+
+}
+
+
+
+@keyframes precioGlow{
+
+
+    from{
+
+        text-shadow:
+        0 0 5px #0dcaf0;
+
+    }
+
+
+    to{
+
+        text-shadow:
+        0 0 25px #0dcaf0;
+
+    }
+
+}
+
+
+
+
+
+/* ============================= */
+/* BOTON CARRITO */
+/* ============================= */
+
+
+#contadorCarrito{
+
+
+    font-size:12px;
+
+
+    animation:
+
+    pulso 1.5s infinite;
+
+}
+
+
+
+
+@keyframes pulso{
+
+
+    0%{
+
+        transform:scale(1);
+
+    }
+
+
+    50%{
+
+        transform:scale(1.3);
+
+    }
+
+
+    100%{
+
+        transform:scale(1);
+
+    }
+
+}
+
+
+
+
+
+.btn-carrito{
+
+
+    transition:.3s;
+
+
+}
+
+
+
+.btn-carrito:hover{
+
+
+    transform:
+    scale(1.05);
+
+
+    box-shadow:
+
+    0 0 15px #198754;
+
+}
+
+
+
+
+/* ============================= */
+/* FOOTER */
+/* ============================= */
+
+
+footer{
+
+
+    backdrop-filter:
+    blur(10px);
+
+    border-top:
+    1px solid #0dcaf0;
+
+}
+
+
+
+
+/* ============================= */
+/* MODAL */
+/* ============================= */
+
+
+.modal-content{
+
+
+    animation:
+
+    modalEntrada .3s ease;
+
+}
+
+
+
+
+@keyframes modalEntrada{
+
+
+    from{
+
+        transform:
+        scale(.8);
+
+        opacity:0;
+
+    }
+
+
+    to{
+
+        transform:
+        scale(1);
+
+        opacity:1;
+
+    }
+
+}
+
+
+
+.modal-body{
+
+    max-height:400px;
+
+    overflow-y:auto;
+
+}
+
+/* ================================= */
+/* EFECTO GENERAL PARA TODAS LAS PAGINAS */
+/* ================================= */
+
+
+body{
+
+    background:
+    radial-gradient(circle at top,#003b4d,#111827 60%) !important;
+
+    color:white;
+
+}
+
+
+
+/* fondo tecnológico */
+
+body::before{
+
+    content:"";
+
+    position:fixed;
+
+    inset:0;
+
+
+    background-image:
+
+    linear-gradient(
+        90deg,
+        transparent 96%,
+        #0dcaf0 100%
+    );
+
+
+    opacity:.07;
+
+
+    animation:
+
+    circuitoGlobal 12s linear infinite;
+
+
+    z-index:-1;
+
+}
+
+
+
+@keyframes circuitoGlobal{
+
+    from{
+
+        transform:translate(0,0);
+
+    }
+
+
+    to{
+
+        transform:translate(-120px,-120px);
+
+    }
+
+}
+
+
+
+
+
+/* logo */
+
+.navbar-brand{
+
+
+    animation:
+
+    logoFlotante 3s infinite ease-in-out;
+
+
+}
+
+
+
+@keyframes logoFlotante{
+
+
+0%,100%{
+
+transform:translateY(0);
+
+}
+
+
+50%{
+
+transform:translateY(-5px);
+
+}
+
+
+}
+
+
+
+
+
+
+
+/* titulos */
+
+h1,h2{
+
+
+animation:
+
+brilloTitulo 2s infinite alternate;
+
+
+}
+
+
+
+@keyframes brilloTitulo{
+
+
+from{
+
+text-shadow:
+0 0 8px #0dcaf0;
+
+}
+
+
+to{
+
+text-shadow:
+
+0 0 30px #0dcaf0,
+0 0 60px #0dcaf0;
+
+}
+
+
+}
+
+
+
+
+
+
+/* ================================= */
+/* PRODUCTOS */
+/* ================================= */
+
+
+.producto-card{
+
+
+background:
+rgba(255,255,255,.08)
+!important;
+
+
+backdrop-filter:blur(10px);
+
+
+border-radius:18px;
+
+
+border:
+1px solid rgba(13,202,240,.25);
+
+
+
+transition:.4s;
+
+
+animation:
+
+entradaProducto .8s ease;
+
+
+}
+
+
+
+@keyframes entradaProducto{
+
+
+from{
+
+opacity:0;
+
+transform:
+
+translateY(40px);
+
+}
+
+
+to{
+
+opacity:1;
+
+transform:
+
+translateY(0);
+
+}
+
+
+}
+
+
+
+
+.producto-card:hover{
+
+
+transform:
+
+translateY(-12px)
+scale(1.04);
+
+
+
+box-shadow:
+
+0 0 35px rgba(13,202,240,.45);
+
+
+}
+
+
+
+
+
+.producto-img{
+
+
+transition:.5s;
+
+
+}
+
+
+
+.producto-card:hover .producto-img{
+
+
+transform:
+
+scale(1.12);
+
+
+}
+
+
+
+
+
+
+
+.precio{
+
+
+color:#0dcaf0!important;
+
+
+animation:
+
+precioNeon 2s infinite alternate;
+
+
+}
+
+
+
+
+@keyframes precioNeon{
+
+
+from{
+
+text-shadow:
+
+0 0 5px #0dcaf0;
+
+}
+
+
+to{
+
+text-shadow:
+
+0 0 25px #0dcaf0;
+
+}
+
+
+}
+
+
+
+
+
+
+/* botones */
+
+
+.btn:hover{
+
+
+transform:
+
+translateY(-3px);
+
+
+transition:.3s;
+
+
+box-shadow:
+
+0 0 18px currentColor;
+
+
+}
+
+
+
+
+
+
+/* carrito */
+
+
+#contadorCarrito{
+
+
+animation:
+
+pulsoCarrito 1.5s infinite;
+
+
+}
+
+
+
+
+@keyframes pulsoCarrito{
+
+
+50%{
+
+transform:scale(1.3);
+
+}
+
+
+}
+
+
+
+
+
+
+
+/* ================================= */
+/* CONTACTO */
+/* ================================= */
+
+
+.card-animada{
+
+
+backdrop-filter:blur(10px);
+
+
+}
+
+
+
+
+.card-animada:hover{
+
+
+box-shadow:
+
+0 0 30px rgba(13,202,240,.5)
+!important;
+
+
+}
+
+
+
+
+
+/* modal */
+
+
+.modal-content{
+
+
+animation:
+
+modalTech .3s;
+
+
+}
+
+
+
+@keyframes modalTech{
+
+
+from{
+
+transform:scale(.85);
+
+opacity:0;
+
+}
+
+
+to{
+
+transform:scale(1);
+
+opacity:1;
+
+}
+
+
+}
+
+/* Texto de tarjetas de productos */
+.producto-card .card-title {
+    color: #ffffff !important;
+    text-shadow: 0 0 10px rgba(13,202,240,.5);
+}
+
+
+.producto-card .card-text {
+    color: #e9ecef !important;
+}
+
+/* ============================= */
+/* REGISTRO */
+/* ============================= */
+
+.registro h2 {
+    color: #000 !important;
+    font-weight: bold;
+}
+
+
+.registro .form-label {
+    color: #000 !important;
+    font-weight: 600;
+}
+
+
+.registro {
+    color: #000;
+}

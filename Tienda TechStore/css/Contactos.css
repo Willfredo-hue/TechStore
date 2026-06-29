@@ -1,0 +1,385 @@
+/* --- ANIMACIONES PARA LA PÁGINA DE CONTACTO --- */
+
+
+/* ============================= */
+/* FONDO TECNOLÓGICO */
+/* ============================= */
+
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    background:
+    radial-gradient(circle at top, #003b4d, #121212 45%);
+    overflow-x: hidden;
+}
+
+
+/* efecto de circuitos moviéndose */
+
+body::before {
+
+    content:"";
+    position: fixed;
+    top:0;
+    left:0;
+
+    width:200%;
+    height:200%;
+
+    background-image:
+    linear-gradient(
+        90deg,
+        transparent 96%,
+        #0dcaf0 100%
+    );
+
+    opacity:0.08;
+
+    animation: circuito 10s linear infinite;
+
+    z-index:-1;
+
+}
+
+
+@keyframes circuito {
+
+    from {
+        transform:translate(0,0);
+    }
+
+    to {
+        transform:translate(-120px,-120px);
+    }
+
+}
+
+
+
+/* ============================= */
+/* TITULO PRINCIPAL CON NEON */
+/* ============================= */
+
+
+.text-info {
+
+    animation: brilloTech 2s infinite alternate;
+
+}
+
+
+@keyframes brilloTech {
+
+    from {
+
+        text-shadow:
+        0 0 10px #0dcaf0,
+        0 0 20px #0dcaf0;
+
+    }
+
+
+    to {
+
+        text-shadow:
+        0 0 25px #0dcaf0,
+        0 0 50px #0dcaf0,
+        0 0 80px #0dcaf0;
+
+    }
+
+}
+
+
+
+/* ============================= */
+/* LOGO TECHSTORE FLOTANTE */
+/* ============================= */
+
+
+.navbar-brand {
+
+    animation: flotarLogo 3s ease-in-out infinite;
+
+}
+
+
+
+@keyframes flotarLogo {
+
+    0%,100% {
+
+        transform:translateY(0);
+
+    }
+
+
+    50% {
+
+        transform:translateY(-6px);
+
+    }
+
+}
+
+
+
+
+/* ============================= */
+/* TARJETAS REDES SOCIALES */
+/* ============================= */
+
+
+/* estado inicial */
+
+.card-animada {
+
+    transition:
+    transform 0.4s cubic-bezier(0.175,0.885,0.32,1.275),
+    background-color .3s ease,
+    box-shadow .3s ease;
+
+
+    cursor:pointer;
+
+
+    animation: aparecerTarjeta .8s ease forwards;
+
+    opacity:0;
+
+}
+
+
+
+/* entrada escalonada */
+
+.card-animada:nth-child(1){
+
+    animation-delay:.2s;
+
+}
+
+
+.card-animada:nth-child(2){
+
+    animation-delay:.4s;
+
+}
+
+
+.card-animada:nth-child(3){
+
+    animation-delay:.6s;
+
+}
+
+
+
+@keyframes aparecerTarjeta {
+
+
+    from {
+
+        opacity:0;
+
+        transform:
+        translateY(40px)
+        scale(.95);
+
+    }
+
+
+    to {
+
+        opacity:1;
+
+        transform:
+        translateY(0)
+        scale(1);
+
+    }
+
+}
+
+
+
+
+
+/* hover de tarjetas */
+
+
+.card-animada:hover {
+
+
+    transform:
+    translateY(-12px)
+    scale(1.03);
+
+
+    box-shadow:
+    0 15px 35px rgba(0,255,255,.35)
+    !important;
+
+
+}
+
+
+
+
+/* ============================= */
+/* ICONOS */
+/* ============================= */
+
+
+.icono-contenedor i {
+
+
+    transition:
+    transform .3s ease,
+    color .3s ease;
+
+
+}
+
+
+
+.card-animada:hover 
+.icono-contenedor i {
+
+
+    transform:
+    scale(1.25)
+    rotate(5deg);
+
+
+}
+
+
+
+/* colores redes */
+
+
+.card-animada:hover .fb-icono i {
+
+    color:#1877F2;
+
+}
+
+
+.card-animada:hover .ig-icono i {
+
+    color:#E1306C;
+
+}
+
+
+.card-animada:hover .wa-icono i {
+
+    color:#25D366;
+
+}
+
+
+
+
+
+/* ============================= */
+/* TEXTOS */
+/* ============================= */
+
+
+.text-white-hover {
+
+    transition:all .2s ease;
+
+}
+
+
+
+.text-white-hover:hover {
+
+    color:#fff !important;
+
+    padding-left:4px;
+
+}
+
+
+
+.text-info-hover:hover {
+
+
+    color:#0dcaf0 !important;
+
+    transition:
+    color .2s ease;
+
+
+}
+
+
+
+
+.small-title {
+
+
+    font-size:.9rem;
+
+    letter-spacing:1px;
+
+    color:#e9ecef;
+
+
+}
+
+
+
+
+
+/* ============================= */
+/* EFECTO MAPA */
+/* ============================= */
+
+
+.ratio {
+
+
+    transition:
+    transform .4s ease,
+    box-shadow .4s ease;
+
+
+}
+
+
+
+.ratio:hover {
+
+
+    transform:
+    scale(1.02);
+
+
+    box-shadow:
+    0 0 25px rgba(13,202,240,.35)
+    !important;
+
+
+}
+
+
+
+
+/* ============================= */
+/* FOOTER */
+/* ============================= */
+
+
+footer {
+
+
+    backdrop-filter: blur(8px);
+
+
+}
